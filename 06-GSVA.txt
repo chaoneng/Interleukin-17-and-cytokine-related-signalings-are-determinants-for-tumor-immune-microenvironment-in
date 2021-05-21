@@ -1,0 +1,63 @@
+#GSVA(SHIL)
+library(GSVA)
+library(DESeq2)
+library(pheatmap)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(GSEABase)
+original_gmt_GSVA<-readLines('C:/Users/jenny/Downloads/c2.cp.kegg.v7.2.entrez.gmt')
+strsplit_no_name<-function(gmt.list_layer){
+  as.character(unlist(strsplit(gmt.list_layer,split = '\t',fixed = T)))[-2]
+}
+database_list_GSVA<-lapply(original_gmt_GSVA,strsplit_no_name)
+for(layers in 1:length(database_list_GSVA)){
+  names(database_list_GSVA)[layers]<-database_list_GSVA[layers][[1]][1]
+  database_list_GSVA[layers][[1]]<-database_list_GSVA[layers][[1]][-1]
+}
+GENE1<-as.character(rownames(z_score_matrix))
+ENTREZ1<-mapIds(x=org.Hs.eg.db,
+                keys=GENE1,
+                keytype = "SYMBOL",
+                column = "ENTREZID")
+ENTREZ1<-as.data.frame(ENTREZ1)
+expr_norm_for_GSVA<-cbind(ENTREZ1$ENTREZ1,z_score_matrix)
+expr_norm_for_GSVA<-as.data.frame(expr_norm_for_GSVA)
+rownames(expr_norm_for_GSVA)<-expr_norm_for_GSVA$V1
+expr_norm_for_GSVA<-expr_norm_for_GSVA[,-1]
+gsvaOut<-gsva(as.matrix(expr_norm_for_GSVA),database_list_GSVA)
+write.csv(gsvaOut,file = "gsvaout.csv")
+library(pheatmap)
+pheatmap(gsvaOut,annotation_col = anno,show_colnames = F)
+
+
+
+#GSVA(SLIH)
+library(GSVA)
+library(DESeq2)
+library(pheatmap)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(GSEABase)
+original_gmt_GSVA<-readLines('C:/Users/jenny/Downloads/c2.cp.kegg.v7.2.entrez.gmt')
+strsplit_no_name<-function(gmt.list_layer){
+  as.character(unlist(strsplit(gmt.list_layer,split = '\t',fixed = T)))[-2]
+}
+database_list_GSVA<-lapply(original_gmt_GSVA,strsplit_no_name)
+for(layers in 1:length(database_list_GSVA)){
+  names(database_list_GSVA)[layers]<-database_list_GSVA[layers][[1]][1]
+  database_list_GSVA[layers][[1]]<-database_list_GSVA[layers][[1]][-1]
+}
+GENE1<-as.character(rownames(z_score_matrix))
+ENTREZ1<-mapIds(x=org.Hs.eg.db,
+                keys=GENE1,
+                keytype = "SYMBOL",
+                column = "ENTREZID")
+ENTREZ1<-as.data.frame(ENTREZ1)
+expr_norm_for_GSVA<-cbind(ENTREZ1$ENTREZ1,z_score_matrix)
+expr_norm_for_GSVA<-as.data.frame(expr_norm_for_GSVA)
+rownames(expr_norm_for_GSVA)<-expr_norm_for_GSVA$V1
+expr_norm_for_GSVA<-expr_norm_for_GSVA[,-1]
+gsvaOut<-gsva(as.matrix(expr_norm_for_GSVA),database_list_GSVA)
+write.csv(gsvaOut,file = "gsvaout.csv")
+library(pheatmap)
+pheatmap(gsvaOut,annotation_col = anno,show_colnames = F)
