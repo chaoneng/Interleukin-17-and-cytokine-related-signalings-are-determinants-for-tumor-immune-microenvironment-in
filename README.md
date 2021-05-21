@@ -1,10 +1,12 @@
 # Interleukin-17-and-cytokine-related-signalings-are-determinants-for-tumor-immune-microenvironment-in
 
-##Authors
+## Authors
 Victor C. Kok, Charles C. N. Wang, Szu-Han Liao, De-Lun Chen. Asia University Taiwan, Taichung, Taiwan, Asia University Taiwan, Taichung, Taiwan, Asia University Taiwan, Taichung, Taiwan
-##Disclosures
- V.C. Kok: None. C.C. Wang: None. S. Liao: None. D. Chen: None.
-##Abstract
+
+## Disclosures
+ V.C. Kok: None. C.C. Wang: None. S. Liao: None. D. Chen: 
+ 
+## Abstract
 Introduction: Programmed death (PD)-1/PD-ligand 1 immunotherapy increases the pathological complete response rate by 13.6 percentage points when added to neoadjuvant chemotherapy for early triple-negative breast cancer (TNBC) (Schmid et al. 2020). This indicates a proportion of TNBC are immune-responsive while many are not. We hypothesized that the tumor immune microenvironment might influence the clinical outcomes of TNBC patients. We wanted to investigate which signaling pathways could determine the TNBC being immune-hot or cold and have prognostication capability.
 Methods: Dataset: TCGA-BRCA. Immune score (IS) and stromal score (SS) were calculated from the ESTIMATE and correlated with the documented overall survival. CIBERSORTx and Timer 2.0 were adopted for fractions of immune cell analysis. Differentially expressed genes (DEGs) were identified. Gene Ontology analysis and KEGG were adopted to study the enrichment of the gene sets. We explored and queried the cBioPortal for cancer genomics.
 RESULTS: 115 patients with triple-negative breast cancer and 112 normal adjacent tissues were retrieved. The stromal score was high in 12 patients, and the immune score was high in another 12 patients. On Kaplan-Meier analyses, SS-low predicts higher overall survival (OS) vis-à-vis SS-high patients (P = 0.0081), while IS-high predicts higher OS as compared with IS-low patients (P = 0.2, too few cases in the IS-high). When compared with IS-low/SS-high patients, IS-high/SS-low patients had better OS (P = 0.045). In the tumor microenvironment (TME), a higher proportion of macrophages are in the M2 state in patients with IS-low/SS-high patients (P < 0.001). More CD8+ cytotoxic T-cells in IS-high/SS-low patients (14.8% vs. 3.7%, p = 0.0286). More resting NK cells in IS-low/SS-high TME (P = 0.0108). DEGs analysis shows 651 DEGs (284 upregulated, 367 down) in IS-high/SS-low TME, whereas there were 370 DEGs (187 upregulated, 183 down) in IS-low/SS-high patients. The KEGG pathway analysis reveals the DEGs were enriched in the IL-17 signaling pathway and the cytokine-cytokine receptor interaction pathway. IL-17 is a proinflammatory cytokine that signals mainly via TRAF3 Interacting Protein 2 (TRAF3IP2), an inflammatory mediator and upstream regulator of several crucial transcription factors such as AP-1 and NF-κB. On the cBioPortal platform, we discovered that 13% of ER-negative, HER2-FISH-unamplified breast cancers harbor IL17RA deep deletion and 25% with TRAF3IP2 amplification.
