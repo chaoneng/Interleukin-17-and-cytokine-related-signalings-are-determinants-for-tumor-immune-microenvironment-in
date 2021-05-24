@@ -1,7 +1,8 @@
 # Interleukin-17-and-cytokine-related-signalings-are-determinants-for-tumor-immune-microenvironment-in
 
 ## Authors
-Victor C. Kok, Charles C. N. Wang, Szu-Han Liao, De-Lun Chen. Asia University Taiwan, Taichung, Taiwan, Asia University Taiwan, Taichung, Taiwan, Asia University Taiwan, Taichung, Taiwan
+Victor C. Kok, Charles C. N. Wang, Szu-Han Liao, De-Lun Chen.
+Asia University Taiwan, Taichung, Taiwan
 
 ## Disclosures
  V.C. Kok: None. C.C. Wang: None. S. Liao: None. D. Chen: 
